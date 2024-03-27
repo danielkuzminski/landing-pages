@@ -1,0 +1,314 @@
+/* hero section font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+/* body font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    font-family: "Roboto Flex", sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section {
+    margin-bottom: 3.5rem;
+}
+
+@media screen and (min-width: 450px) {
+    main {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .hero {
+        width: 100%;
+        height: 50vh;
+        color: #fff;
+        position: relative;
+    }
+    
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('./assets/mini-hero.jpg');
+        background-position: center;
+        background-size: cover;
+        filter: grayscale();
+    }
+
+    .hero-content {
+        width: 50vw;
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 2;
+    }
+
+    .hero-title {
+        font-family: "Roboto Slab", serif;
+        font-size: 2rem;
+        font-weight: 200;
+    }
+
+    .hero-description {
+        font-size: 1.5rem;
+        font-weight: 100;
+    }
+
+    .hero-cta {
+        padding: 10px 20px;
+        background-color: rgba(255, 136, 0, .9);
+        border-radius: 5px;
+        color: #fff;
+        border: none;
+        text-transform: uppercase;
+        display: block;
+        cursor: pointer;
+        width: 40%;
+    }
+
+    .introduction {
+        width: 100%;
+        min-height: 50vh;
+        display: flex;
+    }
+
+    .side-a {
+        width: 50%;
+        display: flex;
+        align-items: flex-end;
+        margin: 10px;
+        position: relative;
+    }
+    
+    .side-a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background-image: url('./assets/7.jpg');
+        background-position: center;
+        background-size: cover;
+        filter: grayscale();
+        z-index: -2;
+    }
+
+    .introduction-title {
+        color: #000;
+        font-weight: 300;
+        /* margin-bottom: 3rem; */
+        /* padding: 10px; */
+        font-family: "Roboto Slab", serif;
+    }
+
+    .side-b {
+        width: 50%;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        font-size: 1.2rem;
+    }
+
+    .description {
+        font-weight: 100;
+    }
+
+    .prelude {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .question {
+        display: inline-block;
+        border-top: 1px solid black;
+        text-transform: uppercase;
+        font-weight: 200;
+        text-align: center;
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+
+    .answers {
+        width: 100%;
+    }
+    
+    .answer {
+        width: 100%;
+        /* min-height: 50vh; */
+        display: flex;
+        /* margin: 0 auto; */
+        margin-bottom: 35px;
+
+    }
+
+    .answer-side {
+        width: 70%;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 3rem;
+        gap: 30px;
+        font-size: 1.2rem;
+    }
+
+    .answer-title {
+        font-size: 2rem;
+        font-weight: 200;
+        position: relative;
+    }
+
+    .answer-title::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f80;
+        z-index: -2;
+        transform: rotate(3deg);
+    }
+
+    .heritage {
+        width: 30%;
+        display: flex;
+        align-items: flex-end;
+        margin: 10px;
+        position: relative;
+    }
+    
+    .heritage::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background-image: url('./assets/heritage.jpg');
+        background-position: center;
+        background-size: cover;
+        filter: grayscale();
+        z-index: -2;
+    }
+
+    .iconic {
+        width: 30%;
+        display: flex;
+        align-items: flex-end;
+        margin: 10px;
+        position: relative;
+    }
+
+    .iconic::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background-image: url('./assets/2.jpg');
+        background-position: center;
+        background-size: cover;
+        filter: grayscale();
+        z-index: -2;
+    }
+
+    .thrilling {
+        width: 30%;
+        display: flex;
+        align-items: flex-end;
+        margin: 10px;
+        position: relative;
+    }
+    
+    .thrilling::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background-image: url('./assets/4.jpg');
+        background-position: center;
+        background-size: cover;
+        filter: grayscale();
+        z-index: -2;
+    }
+
+    .customization {
+        width: 30%;
+        display: flex;
+        align-items: flex-end;
+        margin: 10px;
+        position: relative;
+    }
+    
+    .customization::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background-image: url('./assets/custom.jpg');
+        background-position: center;
+        background-size: cover;
+        filter: grayscale();
+        z-index: -2;
+    }
+
+    .cutting {
+        width: 30%;
+        display: flex;
+        align-items: flex-end;
+        margin: 10px;
+        position: relative;
+    }
+    
+    .cutting::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background-image: url('./assets/performance.jpg');
+        background-position: center;
+        background-size: cover;
+        filter: grayscale();
+        z-index: -2;
+    }
+}
