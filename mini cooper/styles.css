@@ -14,6 +14,7 @@ body {
 	width: 100vw;
 	min-height: 100vh;
 	font-family: "Roboto Flex", sans-serif;
+	background-image: linear-gradient(to bottom, #b0afaf, #f6eaea, #fff);
 }
 
 a {
@@ -249,28 +250,108 @@ section {
 
 	/* selection section */
 	.selection {
-		margin: 50px auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+	}
+	
+	.selection::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-image: url('./assets/devon-janse-van-rensburg-ZTI81GyvVHs-unsplash\(1\).jpg');
+		background-position: center;
+		background-size: cover;
+		border-radius: 30px;
+		z-index: -1;
+		filter: grayscale();
 	}
 
-	.cooper {
-		/* display: grid;
-        grid-template-columns: repeat(2, 1fr); */
-		margin: 0 auto;
-	}
-
-	.selection-title {
-		color: #000;
-		font-weight: 300;
-		font-size: 2.5rem;
-		text-align: center;
+	.no-border {
+		border: none;
 	}
 
 	.cooper-card {
-		/* width: 80%; */
-		background-image: linear-gradient(to right, #f80, #fff);
-		/* background-color: rgba(255, 136, 0, .7); */
-		margin: 1rem;
+		background-image: linear-gradient(to right, rgba(255, 136, 0, .6), #fff);
+		margin: 1.2rem;
 		padding: 1rem;
 		cursor: pointer;
+		border-radius: 15px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.cooper-name {
+		text-transform: uppercase;
+		font-weight: 300;
+		color: #000;
+	}
+
+
+	/* action form */
+	.action {
+		margin: 50px auto;
+		width: 80%;
+		padding: 50px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px 0;
+	}
+
+	.schedule-form {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		width: 60%;
+		background-image: linear-gradient(to right, #edebe8, #fff);
+		padding: 20px;
+		border-radius: 20px;
+		gap: 10px 0;
+	}
+
+	.schedule-title {
+		text-transform: uppercase;
+		font-weight: 300;
+		font-size: 1.2rem;
+		margin-bottom: 10px;
+		border-bottom: 1px solid #f80;
+	}
+
+	.schedule-label {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.schedule-label input, .schedule-label select {
+		width: 40%;
+		padding: 1px;
+		border-radius: 3px;
+		border-style: solid;
+		color: #000;
+	}
+
+	.schedule-span {
+		text-transform: uppercase;
+		font-weight: 100;
+	}
+
+	.submit {
+		margin-top: 10px;
+		width: 50%;
+		background-color: #f80;
+		border: none;
+		padding: 10px 20px;
+		border-radius: 5px;
+		text-transform: uppercase;
+		color: #fff;
+		font-size: 1rem;
 	}
 }
