@@ -8,6 +8,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
 }
 
 body {
@@ -38,6 +39,7 @@ section {
 		height: 50vh;
 		color: #fff;
 		position: relative;
+		transition: 1s;
 	}
 
 	.hero::before {
@@ -85,6 +87,75 @@ section {
 		display: block;
 		cursor: pointer;
 		width: 40%;
+	}
+
+	.menu {
+		position: absolute;
+		top: 6rem;
+		right: 4rem;
+		transition: 1s;
+		transform: translateX(200px);
+		color: transparent;
+	}
+
+	.menu-list {
+		list-style: none;
+		text-transform: uppercase;
+	}
+
+	.menu-list-item {
+		/* padding: 10px; */
+		margin-bottom: 20px;
+		font-weight: 300;
+		font-size: 1.5rem;
+		cursor: pointer;
+	}
+
+	.hamburger-area {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 4rem;
+		height: 4rem;
+		background-color: #f80;
+		border-bottom-left-radius: 30px;
+		transition: 1s;
+	}
+
+	.hamburger-area:hover {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255, 136, 0, .5);
+	}
+
+	.hamburger-area:hover~.menu  {
+		transform: translateX(0);
+		color: #fff;
+	}
+	
+	.hamburger-menu {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		/* background-color: #000; */
+		width: 2rem;
+		height: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		cursor: pointer;
+		
+	}
+
+	.bar {
+		display: block;
+		width: 90%;
+		height: 2px;
+		background-color: #fff;
 	}
 
 	/* intro section */
@@ -263,7 +334,7 @@ section {
 		height: 100%;
 		top: 0;
 		left: 0;
-		background-image: url('./assets/devon-janse-van-rensburg-ZTI81GyvVHs-unsplash\(1\).jpg');
+		/* background-image: url('./assets/devon-janse-van-rensburg-ZTI81GyvVHs-unsplash\(1\).jpg'); */
 		background-position: center;
 		background-size: cover;
 		border-radius: 30px;
@@ -276,7 +347,8 @@ section {
 	}
 
 	.cooper-card {
-		background-image: linear-gradient(to right, rgba(255, 136, 0, .6), #fff);
+		/* background-image: linear-gradient(to right, rgba(255, 136, 0, .6), #fff); */
+		background-color: rgba(255, 136, 0, .5);
 		margin: 1.2rem;
 		padding: 1rem;
 		cursor: pointer;
@@ -295,7 +367,7 @@ section {
 
 	/* action form */
 	.action {
-		margin: 50px auto;
+		margin: 10px auto;
 		width: 80%;
 		padding: 50px;
 		display: flex;
@@ -310,7 +382,8 @@ section {
 		align-items: flex-start;
 		justify-content: flex-start;
 		width: 60%;
-		background-image: linear-gradient(to right, #edebe8, #fff);
+		/* background-image: linear-gradient(to right, #edebe8, #fff); */
+		background-color: #f4f0f0;
 		padding: 20px;
 		border-radius: 20px;
 		gap: 10px 0;
@@ -353,5 +426,11 @@ section {
 		text-transform: uppercase;
 		color: #fff;
 		font-size: 1rem;
+	}
+
+	.footer {
+		min-width: 100vh;
+		min-height: 50px;
+		border-top: 1px solid #f80;
 	}
 }
