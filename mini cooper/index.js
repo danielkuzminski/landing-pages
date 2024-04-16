@@ -1,7 +1,9 @@
-// const hamMenu = document.querySelector('.hamburger-menu')
-// const hamArea = document.querySelector('.ham')
+const hamburgerMenu = document.querySelector('.hamburger-area')
 
-// hamMenu.addEventListener('click', () => {
-//     hamArea.classList.replace('hamburger-area','hamburger-area-full')
-// })
+const hamburger = document.querySelector('.hamburger-menu')
 
+console.log(hamburgerMenu);
+
+hamburger.addEventListener('click', () => {
+    hamburgerMenu.classList.toggle('full')
+})

@@ -15,7 +15,7 @@ body {
 	width: 100vw;
 	min-height: 100vh;
 	font-family: "Roboto Flex", sans-serif;
-	background-image: linear-gradient(to bottom, #b0afaf, #f6eaea, #fff);
+	/* background-image: linear-gradient(to bottom, #b0afaf, #f6eaea, #fff); */
 }
 
 a {
@@ -24,12 +24,12 @@ a {
 }
 
 section {
-	margin-bottom: 3.5rem;
+	margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 450px) {
 	main {
-		max-width: 1440px;
+		max-width: 1080px;
 		margin: 0 auto;
 	}
 
@@ -92,7 +92,7 @@ section {
 	.menu {
 		position: absolute;
 		top: 6rem;
-		right: 4rem;
+		right: 5rem;
 		transition: 1s;
 		transform: translateX(200px);
 		color: transparent;
@@ -100,13 +100,13 @@ section {
 
 	.menu-list {
 		list-style: none;
-		text-transform: uppercase;
+		text-transform: capitalize;
 	}
 
 	.menu-list-item {
-		/* padding: 10px; */
 		margin-bottom: 20px;
 		font-weight: 300;
+		text-shadow: 0 0 3px #000;
 		font-size: 1.5rem;
 		cursor: pointer;
 	}
@@ -122,25 +122,38 @@ section {
 		transition: 1s;
 	}
 
-	.hamburger-area:hover {
+
+	/* hover effect on hamburger - css only */
+	/* .hamburger-area:hover {
 		position: absolute;
 		top: 0;
 		right: 0;
 		width: 100%;
 		height: 100%;
 		background-color: rgba(255, 136, 0, .5);
-	}
-
+	} 
+	
 	.hamburger-area:hover~.menu  {
 		transform: translateX(0);
 		color: #fff;
+	} */
+
+
+	.full {
+		width: 110%;
+		height: 110%;
+		background-color: rgba(255, 136, 0, .5);
 	}
-	
+
+	.full~.menu {
+		transform: translateX(0);
+		color: #fff;
+	}
+
 	.hamburger-menu {
 		position: absolute;
 		top: 1rem;
 		right: 1rem;
-		/* background-color: #000; */
 		width: 2rem;
 		height: 2rem;
 		display: flex;
@@ -430,7 +443,23 @@ section {
 
 	.footer {
 		min-width: 100vh;
-		min-height: 50px;
+		min-height: 60px;
 		border-top: 1px solid #f80;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.social {
+		display: flex;
+		/* align-items: flex-start; */
+		justify-content: space-around;
+	}
+
+	.icon {
+		margin-right: 10px;
+		font-size: 2rem;
+		color: #f80;
+		cursor: pointer;
 	}
 }
