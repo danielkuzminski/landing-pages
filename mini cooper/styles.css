@@ -494,6 +494,7 @@ main {
 	/* intro section */
 
 	.introduction {
+		margin-top: 50px;
 		width: 100%;
 		min-height: 50vh;
 		display: flex;
@@ -511,6 +512,7 @@ main {
 	.introduction-title {
 		color: #000;
 		font-weight: 300;
+		font-size: 2.5rem;
 		font-family: "Roboto Slab", serif;
 		text-shadow: none;
 	}
@@ -531,6 +533,10 @@ main {
 
 	.description {
 		font-weight: 100;
+	}
+	
+	.question {
+		margin: 50px auto;
 	}
 
 	/* answers section */
